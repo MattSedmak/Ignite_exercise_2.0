@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Ignite Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first app built with React and Styled Components.
 
-## Available Scripts
+## Install
+
+Clone the repo:
+
+### `git clone https://github.com/MattSedmak/Ignite_exercise_2.0.git`
 
 In the project directory, you can run:
 
