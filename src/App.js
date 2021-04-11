@@ -78,7 +78,7 @@ class App extends Component {
       <Wrapper>
         <GlobalStyle />
         <h1>
-          Dope <br /> Github <br /> Repositories
+          Dope <br /> Github <br /> Repositories.
         </h1>
         <Counter
           increment={this.incrementHandler}

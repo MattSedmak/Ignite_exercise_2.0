@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
   width: 50%;
   line-height: 1.6;
+  color: #333447;
 `;
 
 export const Heading = styled.h3`

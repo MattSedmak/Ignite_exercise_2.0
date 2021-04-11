@@ -11,9 +11,9 @@ import {
 const counter = (props) => {
   return (
     <Wrapper>
-      <DecrementBtn onClick={props.decrement}>– Decrement</DecrementBtn>
+      <DecrementBtn onClick={props.decrement}>&#9473; Decrement</DecrementBtn>
       <CounterSpan>Counter: {props.count}</CounterSpan>
-      <IncrementBtn onClick={props.increment}>+ Increment</IncrementBtn>
+      <IncrementBtn onClick={props.increment}>&#9547; Increment</IncrementBtn>
     </Wrapper>
   );
 };

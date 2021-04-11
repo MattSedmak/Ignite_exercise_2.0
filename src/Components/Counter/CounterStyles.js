@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const CounterSpan = styled.p`
   font-size: 1rem;
   color: black;
-  width: 100px;
+  width: 80px;
   text-align: center;
   padding: 10px;
   margin: 20px;
@@ -21,6 +21,7 @@ const Button = styled.button`
   width: 150px;
   border-radius: 50px;
   padding: 10px;
+  font-size: 0.8em;
 `;
 
 export const DecrementBtn = styled(Button)`
