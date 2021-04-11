@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Counter from './Components/Counter/Counter';
 import Repo from './Components/Repo/Repo';
-// import styled from 'styled-components';
+import GlobalStyle from './globalStyles';
+import Wrapper from './AppStyles';
 import axios from 'axios';
 
 class App extends Component {
@@ -35,7 +36,6 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.count !== prevState.count) {
-      // console.log('testing');
       axios
         .get(
           'https://api.github.com/repos/' + this.state.repos[this.state.count]
@@ -75,16 +75,18 @@ class App extends Component {
       );
     }
     return (
-      <div className='App'>
-        <h1>Github Repos</h1>
+      <Wrapper>
+        <GlobalStyle />
+        <h1>
+          Dope <br /> Github <br /> Repositories
+        </h1>
         <Counter
           increment={this.incrementHandler}
           decrement={this.decrementHandler}
           count={this.state.count}
         />
-
         {showRepo}
-      </div>
+      </Wrapper>
     );
   }
 }

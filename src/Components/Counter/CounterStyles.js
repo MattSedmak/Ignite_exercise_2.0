@@ -5,13 +5,13 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;
 
 export const CounterSpan = styled.p`
   font-size: 1rem;
   color: black;
-  width: 120px;
+  width: 100px;
   text-align: center;
   padding: 10px;
   margin: 20px;

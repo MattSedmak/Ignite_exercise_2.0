@@ -1,12 +1,13 @@
 import React from 'react';
+import { Wrapper, Heading, Description, Star } from './RepoStyles';
 
 const repo = (props) => {
   return (
-    <div>
-      <h3>{props.fullName}</h3>
-      <p>{props.description}</p>
-      <p>{props.stars}</p>
-    </div>
+    <Wrapper>
+      <Heading>{props.fullName}</Heading>
+      <Description>{props.description}</Description>
+      <Star>&#9733; {props.stars}</Star>
+    </Wrapper>
   );
 };
 export default repo;
