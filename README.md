@@ -1,6 +1,6 @@
 # Ignite Exercise
 
-This is my first app built with React and Styled Components. Fetch github repositories and display them on the screen when the user clicks on the increment or decrement button, handle and display any errors the API might throw. The counter acts as the index for the array that stores the API endpoints. Ex If the counter is 0 `eslint/eslint` will be displayed as Elint is the fist item in the array.
+This is my first app built with React and Styled Components. Fetch github repositories and display them on the screen when the user clicks on the increment or decrement button, handle and display any errors the API might throw. The counter acts as the index for the array that stores the API endpoints. Ex If the counter is 0 `eslint/eslint` will be displayed as Eslint is the fist item in the array.
 
 ## Install
 
