@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import Counter from './Components/Counter/Counter';
-import Repo from './Components/Repo/Repo';
-import GlobalStyle from './globalStyles';
+import Counter from '../Components/Counter/Counter';
+import Repo from '../Components/Repo/Repo';
+import Spinner from '../Components/Spinner/Spinner';
+import GlobalStyle from '../globalStyles';
 import Wrapper from './AppStyles';
 import axios from 'axios';
 
@@ -21,30 +22,37 @@ class App extends Component {
     ],
     count: 0,
     error: false,
+    loading: false,
   };
 
   componentDidMount() {
+    this.setState({ loading: true });
     axios
       .get('https://api.github.com/repos/' + this.state.repos[0])
       .then((response) => {
-        this.setState({ repository: response.data });
+        this.setState({ repository: response.data, loading: false });
       })
       .catch((error) => {
-        this.setState({ error: true });
+        this.setState({ error: true, loading: false });
       });
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.count !== prevState.count) {
+      this.setState({ loading: true });
       axios
         .get(
           'https://api.github.com/repos/' + this.state.repos[this.state.count]
         )
         .then((response) => {
-          this.setState({ repository: response.data, error: false });
+          this.setState({
+            repository: response.data,
+            error: false,
+            loading: false,
+          });
         })
         .catch((error) => {
-          this.setState({ error: true });
+          this.setState({ error: true, loading: false });
         });
     }
   }
@@ -85,7 +93,7 @@ class App extends Component {
           decrement={this.decrementHandler}
           count={this.state.count}
         />
-        {showRepo}
+        {this.state.loading ? <Spinner /> : [showRepo]}
       </Wrapper>
     );
   }
